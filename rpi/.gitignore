@@ -3,7 +3,7 @@ userland/cat2
 userland/rigol
 userland/query-tmc
 
-server/rigol-server
+servers/rigol-server
 
 kernel-module/usbtmc.ko
 kernel-module/usbtmc.o
