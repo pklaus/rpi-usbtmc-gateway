@@ -20,6 +20,7 @@ echo -e "\n---------------"
 echo "Setting up the udev rules"
 cp udev-rules/98-usbtmc.rules /etc/udev/rules.d/
 udevadm control --reload-rules
+udevadm trigger
 echo -e "---------------\n"
 
 echo -e "\n---------------"
