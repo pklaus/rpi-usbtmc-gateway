@@ -9,6 +9,10 @@ cd kernel-module
 make
 cd ..
 
+cd servers
+make
+cd ..
+
 cd userland
 make
 cd ..
