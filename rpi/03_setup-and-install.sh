@@ -26,8 +26,13 @@ echo -e "\n---------------"
 echo "Setting up the startup service"
 cp system-startup/usbtmc.service /etc/systemd/system/
 systemctl daemon-reload
-systemctl enable usbtmc
-systemctl start usbtmc
+echo -e "\nSet up the systemd service: usbtmc"
+echo "You can start it with:"
+echo " systemctl start usbtmc"
+echo "To check its status, run:"
+echo " systemctl start usbtmc"
+echo "To enable it at system startup, run:"
+echo " systemctl enable usbtmc"
 echo -e "---------------\n"
 
 

@@ -1,11 +1,12 @@
 
 [Unit]
-Description=Power-off gpu
+Description=USBTMC <-> Ethernet bridge service
 
 [Service]
 Type=simple
 Environment="DIR=/opt/usbtmc/rpi"
-ExecStart=/opt/usbtmc/rpi/servers/nc.sh
+#ExecStart=/opt/usbtmc/rpi/servers/nc.sh
+ExecStart=/opt/usbtmc/rpi/servers/socat.sh
 
 [Install]
 WantedBy=multi-user.target
