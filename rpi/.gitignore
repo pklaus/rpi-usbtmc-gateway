@@ -7,7 +7,6 @@ kernel-module/usbtmc.mod.c
 kernel-module/Module.symvers
 kernel-module/usbtmc.mod.o
 kernel-module/modules.order
-kernel-module/usbtmc.ko
 kernel-module/.*
 
 
