@@ -1,11 +1,21 @@
-// rigol.c - a simple terminal program to control Rigol DS1000 series scopes (might work with higher ones too)
-// Copyright 2010 by Mark Whitis, 2012 by Jiri Pittner <jiri@pittnerovi.com>
-// Improvements by Jiri Pittner:
-// readline with history, avoiding timeouts, unlock scope at CTRL-D, read large sample memory, specify device at the command line
-// !!! needs a patched usbtmc.c kernel driver for transmission of more than 1024 samples, otherwise the scope's firmware crashes
-// compile and link as gcc -O rigol.c -lreadline
 //
-// http://www.pittnerovi.com/jiri/hobby/electronics/rigol/
+//                       - rigol.c -
+//         a simple terminal program to control
+//         Rigol DS1000 series scopes (might work
+//                 with higher ones too)
+//
+// Copyright 2010 by Mark Whitis
+//           2012 by Jiri Pittner <jiri@pittnerovi.com>
+//
+// Very nice features:
+//
+//   * specify device as cli argument
+//   * uses readline with history
+//   * read large sample memory
+//   * avoids timeouts
+//   * unlock scope at CTRL-D
+//
+// found at http://www.pittnerovi.com/jiri/hobby/electronics/rigol/
 
 /*
  *      This program is free software: you can redistribute it and/or modify

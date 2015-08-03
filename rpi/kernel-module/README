@@ -1,0 +1,8 @@
+
+### The Linux Kernel Module USBTMC
+
+The kernel sources for the USBTMC module are to be found here:
+
+* [usbtmc.c](https://github.com/torvalds/linux/blob/master/drivers/usb/class/usbtmc.c)
+* [tmc.h](https://github.com/torvalds/linux/blob/master/include/uapi/linux/usb/tmc.h)
+

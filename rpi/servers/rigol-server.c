@@ -1,5 +1,9 @@
 /*
   rigol-server.c
+
+  combines
+  * rigol.c from http://www.pittnerovi.com/jiri/hobby/electronics/rigol/ with
+  * the C server code from http://www.binarytides.com/server-client-example-c-sockets-linux/
 */
 
 #include <stdlib.h>
