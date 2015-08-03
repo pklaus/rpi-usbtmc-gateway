@@ -37,7 +37,7 @@
 #include <unistd.h>
 
 #define MAX_RESPONSE_LENGTH (1024*1024+1024)
-#define DEBUG_LEVEL 2
+#define DEBUG_LEVEL 1
 
 const int max_response_length = MAX_RESPONSE_LENGTH;
 const int normal_response_length = 1024;
