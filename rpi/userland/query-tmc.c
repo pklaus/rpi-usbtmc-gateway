@@ -12,7 +12,11 @@
 #include <sys/select.h>
 #include <sys/time.h>
 
+#define BUFSIZE 1024*1024+1024
+#define NEXT {argv++;argc--;}
+
 char *dev = "/dev/usbtmc0";
+unsigned char buf[BUFSIZE];
 
 void usage_exit(void) { 
     fprintf(stderr, "usage: query-tmc [-r] <command>\n");
@@ -24,10 +28,6 @@ void error_exit(void) {
     exit(1);
 }
 
-#define BUFSIZE 4096
-unsigned char buf[BUFSIZE];
-
-#define NEXT {argv++;argc--;}
 int main(int argc, char **argv) {
 
     int do_read = 0;
