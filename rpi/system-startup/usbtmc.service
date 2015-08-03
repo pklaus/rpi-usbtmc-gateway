@@ -4,9 +4,19 @@ Description=USBTMC <-> Ethernet bridge service
 
 [Service]
 Type=simple
-Environment="DIR=/opt/usbtmc/rpi"
+
+ExecStartPre=-/usr/bin/rmmod usbtmc
+ExecStartPre=/usr/bin/insmod /opt/usbtmc/rpi/kernel-module/usbtmc.ko
+
+## Using one of the netcat / socat redirect scripts:
+#Environment="DIR=/opt/usbtmc/rpi"
+## and
 #ExecStart=/opt/usbtmc/rpi/servers/nc.sh
-ExecStart=/opt/usbtmc/rpi/servers/socat.sh
+## or
+#ExecStart=/opt/usbtmc/rpi/servers/socat.sh
+
+## Using the rigol-server written in C:
+ExecStart=/opt/usbtmc/rpi/servers/rigol-server
 
 [Install]
 WantedBy=multi-user.target
