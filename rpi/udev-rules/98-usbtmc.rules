@@ -1,0 +1,8 @@
+KERNEL=="usbtmc[0-9]*", GROUP="usbtmc", MODE="0660"
+
+### or more specific:
+
+# Agilent DSO-X 2004A
+SUBSYSTEMS=="usb", ACTION=="add", ATTRS{idVendor}=="0957", ATTRS{idProduct}=="179a", GROUP="usbtmc", MODE="0660"
+# Rigol Technologies DS1000 SERIES – ID 1ab1:0588
+SUBSYSTEMS=="usb", ACTION=="add", ATTRS{idVendor}=="1ab1", ATTRS{idProduct}=="0588", GROUP="usbtmc", MODE="0660"

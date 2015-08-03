@@ -1,0 +1,12 @@
+
+[Unit]
+Description=Power-off gpu
+
+[Service]
+Type=simple
+Environment="DIR=/opt/usbtmc"
+ExecStart=/opt/usbtmc/servers/nc.sh
+
+[Install]
+WantedBy=multi-user.target
+

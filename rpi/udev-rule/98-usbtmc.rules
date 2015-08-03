@@ -1,1 +1,0 @@
-KERNEL=="usbtmc[0-9]*", GROUP="gpio", MODE="0660"
