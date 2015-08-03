@@ -10,6 +10,7 @@ pacman -S --needed git
 cd /opt
 git clone https://github.com/pklaus/rpi-usbtmc-gateway.git usbtmc
 cd usbtmc
+ls -l
 
 echo -e "\nnow run:\n"
 
