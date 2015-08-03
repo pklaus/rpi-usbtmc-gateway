@@ -15,7 +15,8 @@
 char *dev = "/dev/usbtmc0";
 
 void usage_exit(void) { 
-    fprintf(stderr, "usage: tmc <command>\n");
+    fprintf(stderr, "usage: query-tmc [-r] <command>\n");
+    fprintf(stderr, "example: query-tmc -r *IDN?\n");
     exit(1); 
 }
 void error_exit(void) {
