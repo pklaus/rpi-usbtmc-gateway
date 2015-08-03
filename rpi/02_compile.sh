@@ -9,7 +9,7 @@ cd kernel-module
 make
 cd ..
 
-cd cat2
+cd userland
 make
 cd ..
 
