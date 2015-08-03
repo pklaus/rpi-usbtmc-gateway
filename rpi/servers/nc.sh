@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 : ${DIR:?"Need to set the DIR environment variable"}
 

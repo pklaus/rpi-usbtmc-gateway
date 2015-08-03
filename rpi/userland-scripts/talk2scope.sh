@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Usage: ./talk2scope.sh /dev/usbtmc0 < scpi_commands > output_file
 
 : ${DIR:?"Need to set the DIR environment variable"}
