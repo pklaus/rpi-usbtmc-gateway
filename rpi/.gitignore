@@ -1,6 +1,7 @@
 
 userland/cat2
 userland/rigol
+userland/query-tmc
 
 kernel-module/usbtmc.ko
 kernel-module/usbtmc.o
