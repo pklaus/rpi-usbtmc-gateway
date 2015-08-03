@@ -4,8 +4,8 @@ Description=Power-off gpu
 
 [Service]
 Type=simple
-Environment="DIR=/opt/usbtmc"
-ExecStart=/opt/usbtmc/servers/nc.sh
+Environment="DIR=/opt/usbtmc/rpi"
+ExecStart=/opt/usbtmc/rpi/servers/nc.sh
 
 [Install]
 WantedBy=multi-user.target

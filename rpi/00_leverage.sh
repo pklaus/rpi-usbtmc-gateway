@@ -13,8 +13,9 @@ cd usbtmc
 
 echo -e "\nnow run:\n"
 
+echo "cd /opt/usbtmc/rpi"
 echo "./01_install-requirements.sh"
 echo "./02_compile.sh"
 echo "./03_setup-and-install.sh"
-
+echo -e "\n"
 

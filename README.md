@@ -3,6 +3,10 @@
 This is a collection of software and scripts to
 use a Raspberry Pi as a USBTMC ⟷  Ethernet Gateway.
 
+#### Installation
+
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/pklaus/rpi-usbtmc-gateway/master/rpi/00_leverage.sh)"
+
 #### Credit
 
 The credit for this work goes mainly to Dr. Volker Ziemann
