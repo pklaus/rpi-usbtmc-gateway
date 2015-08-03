@@ -10,7 +10,7 @@ while read line; do
 	echo $line > ${DEV}
 	sleep 0.01
 	if [[ $line == *\?* ]] ; then
-	    "$DIR/cat2/cat2" < ${DEV}
+	    "$DIR/userland/cat2" < ${DEV}
 	fi
     else
 	echo "Device ${DEV} does not exist"

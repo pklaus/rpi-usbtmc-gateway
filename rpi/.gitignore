@@ -1,5 +1,6 @@
 
-cat2/cat2
+userland/cat2
+userland/rigol
 
 kernel-module/usbtmc.ko
 kernel-module/usbtmc.o
