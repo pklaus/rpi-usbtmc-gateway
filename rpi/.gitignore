@@ -1,4 +1,13 @@
 
 cat2/cat2
+
 kernel-module/usbtmc.ko
+kernel-module/usbtmc.o
+kernel-module/usbtmc.mod.c
+kernel-module/Module.symvers
+kernel-module/usbtmc.mod.o
+kernel-module/modules.order
+kernel-module/usbtmc.ko
+kernel-module/.*
+
 
