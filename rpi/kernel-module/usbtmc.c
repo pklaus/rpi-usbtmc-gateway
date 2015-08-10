@@ -19,6 +19,15 @@
  * http://www.gnu.org/copyleft/gpl.html.
  */
 
+// To enable debugging output of this kernel module, uncomment the DEBUG definition:
+// http://kernelnewbies.org/FAQ/LinuxKernelDebug101
+//#define DEBUG 1
+// Then compile and reload the module:
+//   su
+//   echo 8 > /proc/sys/kernel/printk
+//   rmmod usbtmc
+//   insmod usbtmc.ko
+
 #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
 
 #include <linux/module.h>
