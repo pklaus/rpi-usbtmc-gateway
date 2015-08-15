@@ -110,6 +110,11 @@ int main(int argc, char **argv)
   }
   puts("Socket created");
 
+  //Set SO_REUSEADDR for faster server restart
+  int enable = 1;
+  if (setsockopt(socket_desc, SOL_SOCKET, SO_REUSEADDR, &enable, sizeof(int)) < 0)
+    printf("setsockopt(SO_REUSEADDR) failed");
+
   //Prepare the sockaddr_in structure
   server.sin_family = AF_INET;
   server.sin_addr.s_addr = INADDR_ANY;
