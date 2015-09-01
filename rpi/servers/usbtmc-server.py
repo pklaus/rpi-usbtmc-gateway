@@ -94,13 +94,15 @@ class CmdTCPServer(socketserver.ThreadingTCPServer):
 
 class UsbtmcServerExample(CmdTCPServer):
 
+    newline = None
+
     def process(self, cmd):
         """
         This is the method to process each command
         received from the client.
         """
         if '?' in cmd:
-            return self.instr.query(cmd)
+            return self.instr.query_raw(cmd)
         else:
             self.instr.write(cmd)
 
