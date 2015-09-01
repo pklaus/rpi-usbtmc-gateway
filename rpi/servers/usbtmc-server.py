@@ -10,23 +10,23 @@ Example run:
 Contains code from https://gist.github.com/pklaus/b741eedc66b5dc01f49a
 """
 
-# Make it work on Python 2 and Python 3:
+import argparse, random, logging, sys
+from logging import DEBUG, INFO, WARNING, ERROR, CRITICAL
+
 try:
     import socketserver
 except ImportError:
     import SocketServer as socketserver
 import socket, threading
-import argparse, random, logging, sys
-from logging import DEBUG, INFO, WARNING, ERROR, CRITICAL
 
 try:
     from universal_usbtmc import import_backend
     from universal_usbtmc import UsbtmcReadTimeoutError
 except ImportError:
-    logger.critical('Cannot import universal_usbtmc, please install this Python package with `pip install https://github.com/pklaus/universal_usbtmc/archive/master.zip`. Exiting...')
+    sys.stderr.write('Cannot import the Python package universal_usbtmc, please it with\n`pip install https://github.com/pklaus/universal_usbtmc/archive/master.zip`.\nExiting...\n')
     sys.exit(1)
 
-logger = logging.getLogger('scpi-server')
+logger = logging.getLogger('usbtmc-server')
 
 class CmdTCPServer(socketserver.ThreadingTCPServer):
     """
