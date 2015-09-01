@@ -128,6 +128,10 @@ def main():
     logger.info('Connected to USBTMC device {}.'.format(instr.idn))
     scpi_server.instr = instr
 
+    if ':' in args.host:
+        logger.info("Starting server at tcp://[{host}]:{port}".format(host=args.host, port=args.port))
+    else:
+        logger.info("Starting server at tcp://{host}:{port}".format(host=args.host, port=args.port))
     try:
         scpi_server.serve_forever()
     except KeyboardInterrupt:
