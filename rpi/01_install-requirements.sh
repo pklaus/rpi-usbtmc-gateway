@@ -9,10 +9,10 @@ pacman -Sy
 for package in wget base-devel vim openbsd-netcat socat
 do
   echo -e "\ninstalling $package\n"
-  pacman -S --needed $package
+  pacman -S --needed --noconfirm $package
 done
 
-pacman -S --needed linux-raspberrypi-headers
+pacman -S --needed --noconfirm linux-raspberrypi-headers
 if [ $? -ne 0 ]; then
   echo -e "\n--------------------"
   echo -e "You're not on a Raspberry Pi? Install the matching kernel header package yourself..."

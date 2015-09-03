@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 pacman -Sy
-pacman -S --needed git
+pacman -S --needed --noconfirm git
 cd /opt
 git clone https://github.com/pklaus/rpi-usbtmc-gateway.git usbtmc
 cd usbtmc
