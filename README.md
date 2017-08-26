@@ -5,6 +5,10 @@ use a Raspberry Pi as a USBTMC ⟷  Ethernet Gateway.
 
 #### Installation
 
+This toolkit is made for a Raspberry Pi running Arch Linux ARM.
+
+There is a simple boot-strapped installation for a RPi runnging a "brand-new" Arch image available:
+
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/pklaus/rpi-usbtmc-gateway/master/rpi/00_leverage.sh)"
 
 #### Credit
